@@ -3,43 +3,41 @@
     <head>
         <meta charset="utf-8">
         <title>NLP Project</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
 
     <body>
 
         <header>
-            <div class="">
-                Logo
+            <div class="logo">
+                NLP Project
             </div>
-            <div class="">
-                navigation
+            <div class="nav">
+                Navigation
             </div>
         </header>
 
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input type="url" id="url" name="input" value="" placeholder="Enter your text here..."></textarea>
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input type="url" id="url" name="input" value="" placeholder="Enter URL ..."></input>
+                    <button onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">Submit</button>
                 </form>
             <section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <ul id="results">
-                    <li class="resultItem">Title:<span id="resultTitle"></span></li>
-                    <li class="resultItem">Author:<span id="resultAuthor"></span></li>
-                    <li class="resultItem">Article:<span id="resultArticle"></span></li>
-                    <li class="resultItem">Image:<span id="resultImage"></span></li>
-                    <li class="resultItem">Videos:<span id="resultVideos"></span></li>
-                    <li class="resultItem">Publish Date:<span id="resultDate"></span></li>
-                    <li class="resultItem">Keywords:<span id="resultFeeds"></span></li>
-                </div>
+            <section id="results" class="hide">
+                <p class="resultItem"><b>Title</b>: <span id="resultTitle"></span></p>
+                <p class="resultItem"><b>Author</b>: <span id="resultAuthor"></span></p>
+                <p class="resultItem"><b>Article</b>: <span id="resultArticle"></span></p>
+                <p class="resultItem"><b>Image</b>: <span id="resultImage"></span></p>
+                <p class="resultItem"><b>Videos</b>: <span id="resultVideos"></span></p>
+                <p class="resultItem"><b>Publish Date</b>: <span id="resultDate"></span></p>
+                <p class="resultItem"><b>Feeds</b>: <span id="resultFeeds"></span></p>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Copyright 2019</p>
         </footer>
 
     </body>

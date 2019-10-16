@@ -19,6 +19,7 @@ function handleSubmit(event) {
         })
         .then(res => res.json())
         .then(function(res) {
+            document.getElementById('results').classList.remove('hide');
             document.getElementById('resultTitle').innerHTML = res.title;
             document.getElementById('resultAuthor').innerHTML = res.author;
             document.getElementById('resultArticle').innerHTML = res.article;
