@@ -20,11 +20,12 @@ form {
     }
 }
 
-#results{
-    &.hide {
-        display: none;
-    }
+#results {
     .itemResult {
         line-height: 2em;
     }
+}
+
+.hide {
+    display: none;
 }

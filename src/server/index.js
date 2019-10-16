@@ -39,9 +39,10 @@ app.post('/extract', function (req, res) {
         'url': url
       }, function(error, response) {
         if (error === null) {
-            console.log(response);
+            res.status = 200;
             res.send(response);
         } else {
+            res.status = 500;
             res.send(error);
         }
       });
