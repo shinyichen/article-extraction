@@ -6,7 +6,7 @@ const mockAPIResponse = require('./mockAPI.js');
 const aylient = require('aylien_textapi');
 const dotenv = require('dotenv');
 
-const PORT = 8080;
+const PORT = 8000;
 const app = express();
 dotenv.config();
 const textApi = new aylient({
@@ -34,6 +34,17 @@ app.listen(PORT, function () {
     console.log(`Listening on port ${PORT}`);
 })
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
+app.post('/test', function (req, res) {
+    const url = req.body.url;
+    textApi.classify({
+        'url': url
+      }, function(error, response) {
+        if (error === null) {
+            console.log(response);
+            res.send(response);
+        } else {
+            res.send(error);
+        }
+      });
+      
 })
