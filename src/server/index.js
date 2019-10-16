@@ -13,7 +13,6 @@ const textApi = new aylient({
     application_id: process.env.AYLIENT_API_ID,
     application_key: process.env.AYLIENT_API_KEY
   });
-const textApiEndpoint = "https://api.aylien.com/api/v1";
 
 // configure express to use body-parse as middle-ware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -34,9 +33,9 @@ app.listen(PORT, function () {
     console.log(`Listening on port ${PORT}`);
 })
 
-app.post('/test', function (req, res) {
+app.post('/extract', function (req, res) {
     const url = req.body.url;
-    textApi.classify({
+    textApi.extract({
         'url': url
       }, function(error, response) {
         if (error === null) {

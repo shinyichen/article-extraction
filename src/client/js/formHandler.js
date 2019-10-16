@@ -8,7 +8,7 @@ function handleSubmit(event) {
     }
     if (Client.validateInput(url)) {
         console.log("::: Form Submitted :::")
-        fetch('http://localhost:8000/test', {
+        fetch('http://localhost:8000/extract', {
             method: 'POST', 
             credentials: 'same-origin',
             headers: {
@@ -19,7 +19,13 @@ function handleSubmit(event) {
         })
         .then(res => res.json())
         .then(function(res) {
-            document.getElementById('results').innerHTML = res.text;
+            document.getElementById('resultTitle').innerHTML = res.title;
+            document.getElementById('resultAuthor').innerHTML = res.author;
+            document.getElementById('resultArticle').innerHTML = res.article;
+            document.getElementById('resultImage').innerHTML = res.image;
+            document.getElementById('resultVideos').innerHTML = res.videos;
+            document.getElementById('resultDate').innerHTML = res.publishDate;
+            document.getElementById('resultFeeds').innerHTML = res.feeds;
         })
     }
 }
