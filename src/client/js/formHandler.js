@@ -23,6 +23,9 @@ function handleSubmit(event) {
             else 
                 updateUIError(res);
         });
+    } else {
+        // invalid URL
+        updateUIError("Invalide URL");
     }
 }
 
@@ -40,7 +43,7 @@ function updateUI(res) {
 
 function updateUIError(error) {
     document.getElementById('results').classList.add('hide');
-    document.getElementById('errorMsg').classList.remove('hide');
+    document.getElementById('error').classList.remove('hide');
     document.getElementById('errorMsg').innerHTML = error;
 }
 
