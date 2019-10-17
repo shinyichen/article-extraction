@@ -1,10 +1,9 @@
 function validateInput(url) {
     console.log("::: Running validateInput :::", url);
-    const pattern = /^https?:\/\/[a-zA-Z0-9\.\-]+.[a-zA-Z]/i; // /i for case insensitive
+    const pattern = /^http[s]?:\/\/[a-zA-Z0-9\.\-\/]+[^.][.]{1}[a-zA-Z]+[\/]?([a-zA-Z0-9\-\/]+)?$/i; // /i for case insensitive
     if (url.match(pattern)) {
         return true;
     } else {
-        alert("Invalid URL");
         return false;
     }
 }
