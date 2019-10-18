@@ -47,4 +47,4 @@ function updateUIError(error) {
     document.getElementById('errorMsg').innerHTML = error;
 }
 
-export { handleSubmit }
+export { handleSubmit, updateUI, updateUIError }
