@@ -31,7 +31,7 @@ function handleSubmit(event) {
 
 function updateUI(res) {
     document.getElementById('results').classList.remove('hide');
-    document.getElementById('errorMsg').classList.add('hide');
+    document.getElementById('error').classList.add('hide');
     document.getElementById('resultTitle').innerHTML = res.title;
     document.getElementById('resultAuthor').innerHTML = res.author;
     document.getElementById('resultArticle').innerHTML = res.article;
